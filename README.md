@@ -1,6 +1,6 @@
 # DACS Lab
 
-Lab for the post-graduate course *Design Automation and Computing System* at School of Integrated Circuit, Peking University. 
+Lab for the post-graduate course *Design Automation and Computing System* at School of Integrated Circuits, Peking University. 
 
 ## Contents
 
