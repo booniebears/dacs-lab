@@ -13,4 +13,4 @@ Lab for the post-graduate course *Design Automation and Computing System* at Sch
 - Python >= 3.12
 - Cadence Genus
 - Cadence Innovus
-- Asap7 Library: [text](https://github.com/The-OpenROAD-Project/asap7)
+- Asap7 Library: https://github.com/The-OpenROAD-Project/asap7
