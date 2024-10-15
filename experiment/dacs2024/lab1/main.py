@@ -123,7 +123,7 @@ def get_pnr_options() -> dict:
             # 'cts',      # the adder module is purely combinatorial and does not require CTS stage
             'routing',
         ],
-        'runmode': 'fast',
+        'runmode': 'skip',  # use 'skip' if you don't need to run physical design, useful for debugging
         
         ###########################################################################
         # TODO: modify the following synthesis options
@@ -192,6 +192,8 @@ def main():
     tech_config = get_tech_config()
     syn_options = get_syn_options()
     pnr_options = get_pnr_options()
+
+    # hint: you need to modify tool rundir if you change the default tool options!
     rundir = os.path.dirname(design_config['verilog_files'][0])
 
     flow = GenusInnovusFlow(
