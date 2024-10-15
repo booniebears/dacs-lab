@@ -123,7 +123,7 @@ def get_pnr_options() -> dict:
             # 'cts',      # the adder module is purely combinatorial and does not require CTS stage
             'routing',
         ],
-        'runmode': 'skip',  # use 'skip' if you don't need to run physical design, useful for debugging
+        'runmode': 'fast',  # use 'skip' if you don't need to run physical design, useful for debugging
         
         ###########################################################################
         # TODO: modify the following synthesis options
