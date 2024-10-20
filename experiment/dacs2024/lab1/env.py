@@ -16,3 +16,4 @@ GENUS_BIN = '/opt/cadence/GENUS20.12.001/bin/genus'
 
 INNOVUS_BIN = '/opt/cadence/INNOVUS/bin/innovus'
 
+
