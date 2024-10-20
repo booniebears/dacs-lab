@@ -7,7 +7,7 @@ from design.adder.add_config import PPAdderConfig
 from design.adder.add_baseline import get_Sklansky_adder, get_KoggeStone_adder, get_BrentKung_adder
 from tech.asap7 import Asap7Library
 from flow.genus_innovus import GenusInnovusFlow
-
+from convert import to_csv
 
 def get_design_config(adder_type='sklansky', input_bit=64) -> dict:
     """
@@ -84,7 +84,7 @@ def get_syn_options() -> dict:
         ###########################################################################
 
         # target timing: float
-        'clk_period_ns': 0.0,
+        'clk_period_ns': 0.5,
 
         # generic logical synthesis effort: [low/medium/high]
         'syn_generic_effort': 'medium',
@@ -195,7 +195,7 @@ def main():
 
     # hint: you need to modify tool rundir if you change the default tool options!
     rundir = os.path.dirname(design_config['verilog_files'][0])
-
+    period = syn_options['clk_period_ns']
     flow = GenusInnovusFlow(
         design_config=design_config,
         tech_config=tech_config,
@@ -208,8 +208,8 @@ def main():
 
     with open(os.path.join(rundir, 'result.json'), 'w') as f:
         json.dump(result, f, indent=4)
-
     print(result)
+    to_csv(period)
 
 
 if __name__ == '__main__':
