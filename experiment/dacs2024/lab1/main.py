@@ -13,7 +13,7 @@ def get_design_config(adder_type='sklansky', input_bit=64) -> dict:
     """
         get the adder design configuration with specific type and bit
     """
-
+    print(f"adder_type = {adder_type}!")
     if adder_type == 'sklansky':
         adder = get_Sklansky_adder(input_bit)
     elif adder_type == 'koggestone':
@@ -84,7 +84,7 @@ def get_syn_options() -> dict:
         ###########################################################################
 
         # target timing: float
-        'clk_period_ns': 0.5,
+        'clk_period_ns': 0.2,
 
         # generic logical synthesis effort: [low/medium/high]
         'syn_generic_effort': 'medium',
@@ -99,7 +99,7 @@ def get_syn_options() -> dict:
         "max_fanout": None,
 
         # transition constraint: float
-        "max_transition_ns": None,
+        "max_transition_ns": 0.1,
 
         # capacitance constraint: float
         "max_capacitance_ff": None,
@@ -188,7 +188,7 @@ def main():
         Run the complete EDA flow for final PPA
     """
 
-    design_config = get_design_config()
+    design_config = get_design_config(adder_type='brentkung')
     tech_config = get_tech_config()
     syn_options = get_syn_options()
     pnr_options = get_pnr_options()

@@ -1,7 +1,7 @@
 import json
 import csv
 
-path = './results/0c1697af26c1e8faa240f24afd7513600c929411e5583f8d7d4a35d6eb0b0540/result.json'
+path = './results/a722b9127e943038e744030235d239edce03a1469f0492f1f2079a93b5456baa/result.json'
 
 def to_csv(period):
     with open(path, 'r') as f:
@@ -21,3 +21,5 @@ def to_csv(period):
         
         # 写入数据行
         csv_writer.writerow([period, Post_Syn_latency, Post_Place_latency, Post_Route_latency, Post_Syn_area, Post_Place_area, Post_Route_area])
+
+# to_csv(1.0)
