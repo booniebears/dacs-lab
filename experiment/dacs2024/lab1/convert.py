@@ -22,4 +22,4 @@ def to_csv(period):
         # 写入数据行
         csv_writer.writerow([period, Post_Syn_latency, Post_Place_latency, Post_Route_latency, Post_Syn_area, Post_Place_area, Post_Route_area])
 
-# to_csv(1.0)
+# to_csv(0.2)

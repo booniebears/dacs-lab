@@ -21,6 +21,7 @@ def get_design_config(adder_type='sklansky', input_bit=64) -> dict:
     elif adder_type == 'brentkung':
         adder = get_BrentKung_adder(input_bit)
     else:  # fall back to ripple carry adder
+        print("Ripple Carry Adder!!!")
         adder = PPAdderConfig(input_bit)
 
     ###########################################################################
